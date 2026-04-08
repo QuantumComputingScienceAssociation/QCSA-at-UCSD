@@ -1,0 +1,216 @@
+'use client';
+
+import Image from 'next/image'
+import Link from 'next/link'
+import MainWebsiteFooter from "../Components/mainWebsiteFooter";
+import MainWebsiteHeader from '../Components/mainWebsiteHeader';
+import { motion } from 'framer-motion';
+
+export default function ResourcesPage() {
+	return (
+		<div className="min-h-screen bg-[#FDFAF4]">
+			<MainWebsiteHeader/>
+			<main id="main-content" className="max-w-6xl mx-auto px-6">
+				<motion.h1 
+					className="text-4xl font-kantumruy font-bold text-[#003E74] text-center mb-12 pt-24"
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6 }}
+				>
+					Resources
+			</motion.h1>		
+			{/* Mentorship Card */}
+			<motion.div 
+				className="rounded-lg w-full p-1 shadow-[0_0_40px_rgba(99,179,255,0.20)] mt-12"
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.2, duration: 0.6 }}
+				whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+			>
+				{/* <section className="bg-white rounded-lg p-10 shadow-[0_18px_40px_rgba(35,66,133,0.08)] ring-4 ring-[rgba(35,66,133,0.04)]">
+					<div className="flex flex-col lg:flex-row items-center gap-8">
+					Left: Text block
+					<div className="lg:w-2/3">
+						<h2 className="text-3xl text-[#003E74] font-kantumruy mb-4">Mentorship Program</h2>
+						<p className="text-[#003E74] text-base mb-8">
+							Connect with experienced mentors in quantum computing and get guidance on your quantum journey. Join our mentorship program to accelerate your learning and career development.
+						</p>
+						<div>
+							<a 
+								href="https://forms.gle/2bJkAoVvj2Gb2Sub7"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-block bg-[#003E74] text-white px-8 py-3 rounded-md text-lg font-kantumruy shadow-md hover:shadow-lg hover:bg-[#006A96] transition"
+							>
+								Apply Now
+							</a>
+						</div>
+					</div>
+
+				{/* Right: Image / gradient card */}
+				{/* <div className="lg:w-1/3 flex justify-center lg:justify-end">
+					<div className="w-full max-w-sm h-100 rounded-md p-6 flex items-center justify-center">
+						<Image src="/images/qisca.png" alt="Mentorship Program" width={350} height={300} className="object-contain w-full h-full" />
+					</div>
+				</div>
+				</div>
+				</section> */} 
+
+			</motion.div>
+			
+
+
+
+
+				{/* QCSA Membership Form - Featured at the top */}
+				{/* <div className="rounded-lg w-full p-1 shadow-[0_0_50px_rgba(99,179,255,0.30)] bg-gradient-to-r from-blue-50 to-indigo-50">
+					<section className="bg-white rounded-lg p-10 shadow-[0_20px_50px_rgba(35,66,133,0.12)] ring-4 ring-[rgba(35,66,133,0.06)]">
+						<div className="flex flex-col lg:flex-row items-center gap-8">
+							<div className="lg:w-2/3">
+								<div className="flex items-center gap-3 mb-4">
+									<h2 className="text-3xl text-[#003E74] font-kantumruy font-bold">QCSA Membership Form</h2>
+								</div>
+								<p className="text-[#003E74] text-base mb-6 leading-relaxed">
+									Join the Quantum Computing Student Association at UC San Diego! Become part of our vibrant community of students passionate about quantum computing and quantum information science. Get access to exclusive workshops, networking events, and opportunities to work on cutting-edge quantum projects.
+								</p>
+								<div className="flex flex-col sm:flex-row gap-4">
+									<a 
+										href="https://docs.google.com/forms/d/e/1FAIpQLSedU6c7m4swzNhmzJURbi5GkkYYyvX7Y5lqNxmCoj9aw4hlQg/viewform?usp=header"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-block bg-[#003E74] text-white px-8 py-3 rounded-md text-lg font-kantumruy shadow-md hover:shadow-xl hover:from-[#006A96] hover:to-blue-800 transition-all duration-300 transform hover:scale-105 text-center"
+									>
+										Join Now →
+									</a>
+								</div>
+							</div>
+
+							<div className="lg:w-1/3 flex justify-center lg:justify-end">
+								<div className="w-96 h-64 rounded-md p-6 flex items-center justify-center relative overflow-hidden">
+									<div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-indigo-50 to-blue-200 opacity-50"></div>
+									<Image 
+										src="/images/join-us.png" 
+										alt="Join QCSA" 
+										width={350} 
+										height={300} 
+										className="object-contain max-w-none relative z-10 drop-shadow-lg" 
+									/>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div> */}
+
+			{/* wrapper adds a subtle light-blue neon aura around the card without changing its size */}
+			<motion.div 
+				className="rounded-lg w-full p-1 shadow-[0_0_40px_rgba(99,179,255,0.20)] mt-24"
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.4, duration: 0.6 }}
+				whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+			>
+					<section className="bg-white rounded-lg p-10 shadow-[0_18px_40px_rgba(35,66,133,0.08)] ring-4 ring-[rgba(35,66,133,0.04)]">
+						<div className="flex flex-col lg:flex-row items-center gap-8">
+						{/* Left: Text block */}
+						<div className="lg:w-2/3">
+							<h2 className="text-3xl text-[#003E74] font-kantumruy mb-4">QHackathon</h2>
+							<p className="text-[#003E74] text-base mb-8">
+								Learn more about upcoming hackathons and the QuBruin team.
+							</p>
+                                <div>
+                            <Link href="/qhackathon" className="inline-block bg-[#003E74] text-white px-8 py-3 rounded-md text-lg font-kantumruy shadow-md hover:shadow-lg hover:bg-[#006A96] transition">
+									Learn More
+							</Link>
+								</div>
+						</div>
+
+						{/* Right: Image / gradient card */}
+						<div className="lg:w-1/3 flex justify-center lg:justify-end">
+							<div className="w-96 h-64 rounded-md p-6 flex items-center justify-center ">
+								{/* increased image size so it appears taller; parent box remains w-96 h-64 so it won't grow */}
+								<Image src="/images/QHack_Graphic.png" alt="resource graphic" width={350} height={300} className="object-contain max-w-none" />
+							</div>
+						</div>
+					</div>
+					</section>
+
+				</motion.div>
+
+
+			<motion.div 
+				className="rounded-lg w-full p-1 shadow-[0_0_40px_rgba(99,179,255,0.20)] mt-24"
+				initial={{ opacity: 0, y: 30 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.8, duration: 0.6 }}
+				whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+			>
+				<section className="bg-white rounded-lg p-10 shadow-[0_18px_40px_rgba(35,66,133,0.08)] ring-4 ring-[rgba(35,66,133,0.04)]">
+					<div className="flex flex-col lg:flex-row items-center gap-8">
+					{/* Left: Text block */}
+					<div className="lg:w-2/3">
+						<h2 className="text-3xl text-[#003E74] font-kantumruy mb-4">Quantum Courses</h2>
+							<p className="text-[#003E74] text-base mb-8">
+								Useful courses for UCSD students passionate about pursuing quantum.
+							</p>
+                                <div>
+                            <Link href="/quantum_classes" className="inline-block bg-[#003E74] text-white px-8 py-3 rounded-md text-lg font-kantumruy shadow-md hover:shadow-lg hover:bg-[#006A96] transition">
+									Learn More
+							</Link>
+								</div>
+						</div>
+
+						{/* Right: Image / gradient card */}
+						<div className="lg:w-1/3 flex justify-center lg:justify-end">
+							<div className="w-96 h-64 rounded-md p-6 flex items-center justify-center ">
+								{/* increased image size so it appears taller; parent box remains w-96 h-64 so it won't grow */}
+								<Image src="/images/QuantumClasses_Graphic.png" alt="resource graphic" width={350} height={300} className="object-contain max-w-none" />
+							</div>
+						</div>
+					</div>
+					</section>
+
+				</motion.div>
+
+				<motion.div 
+					className="rounded-lg w-full p-1 shadow-[0_0_40px_rgba(99,179,255,0.20)] mt-24"
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.6, duration: 0.6 }}
+					whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+				>
+					<section className="bg-white rounded-lg p-10 shadow-[0_18px_40px_rgba(35,66,133,0.08)] ring-4 ring-[rgba(35,66,133,0.04)]">
+						<div className="flex flex-col lg:flex-row items-center gap-8">
+						{/* Left: Text block */}
+						<div className="lg:w-2/3">
+							<h2 className="text-3xl text-[#003E74] font-kantumruy mb-4">Past Newsletters</h2>
+							<p className="text-[#003E74] text-base mb-8">
+								Stay updated on previous QCSA newsletters.
+							</p>
+                                <div>
+                            <Link href="/newsletters" className="inline-block bg-[#003E74] text-white px-8 py-3 rounded-md text-lg font-kantumruy shadow-md hover:shadow-lg hover:bg-[#006A96] transition">
+									Learn More
+							</Link>
+								</div>
+						</div>
+
+						{/* Right: Image / gradient card */}
+						<div className="lg:w-1/3 flex justify-center lg:justify-end">
+							<div className="w-96 h-64 rounded-md p-6 flex items-center justify-center ">
+								{/* increased image size so it appears taller; parent box remains w-96 h-64 so it won't grow */}
+								<Image src="/images/Newsletter_Graphic.png" alt="resource graphic" width={350} height={300} className="object-contain max-w-none" />
+							</div>
+						</div>
+					</div>
+					</section>
+
+				</motion.div>
+
+                
+			</main>
+			{/* spacer to add extra space before the footer */}
+			<div className="mt-48" />
+            
+			<MainWebsiteFooter />
+		</div>
+	)
+}
